@@ -8,6 +8,26 @@
     </a>
     }
     <div class="menu-container align-self-center ms-auto" #temp>
+      <div class="d-flex contact-info">
+        <div class="me-3">
+          Dylan R Jones<br />
+          <span class="job-title"><em>Financial Coach & Life Insurance Agent</em><br /></span>
+          <app-icons icon="phone"></app-icons> <a class="ms-2" href="tel:8652141371">(865) 214-1371</a><br />
+          <app-icons icon="envelope"></app-icons> <a class="ms-2" href="mailto:drjones&#64;capitalchoiceinvest.com">drjones&#64;capitalchoiceinvest.com</a
+          ><br />
+        </div>
+        <div>
+          <img src="/assets/images/dylan-jones-mug-shot.png" />
+        </div>
+      </div>
+
+      <!--
+         Meet www.visitdrjones.com<br / >
+      Email drjones&#64;capitalchoiceinvest.com<br />
+
+      Web www.thecapitalchoice.com
+      -->
+      <!--
       <a label="Show" class="menu-bar-toggle">
         <app-icons icon="user" class="me-2"></app-icons> @if (user$ | async; as user) {
         <span class="me-2">{{ user.name }}</span>
@@ -27,46 +47,48 @@
         </div>
       </div>
     </div>
-  </div>
+-->
+    </div>
 
-  <!-- Toggle sidebar -->
-  <div class="pt-2 float-end d-block d-lg-none">
-    <a (click)="sidebarVisible.set(true)" class="p-2">
-      <app-icons icon="bars" class="me-2 fa-lg"></app-icons>
-    </a>
-  </div>
+    <!-- Toggle sidebar -->
+    <div class="pt-2 float-end d-block d-lg-none">
+      <a (click)="sidebarVisible.set(true)" class="p-2">
+        <app-icons icon="bars" class="me-2 fa-lg"></app-icons>
+      </a>
+    </div>
 
-  <!--
+    <!--
   Flyout sidebar
   -->
-  <p-sidebar
-    [visible]="sidebarVisible()"
-    (onHide)="sidebarVisible.set(false)"
-    [style]="{ 'z-index': 10000 }"
-    appendTo="body"
-    [baseZIndex]="10000"
-    [dismissible]="true"
-    [showCloseIcon]="false"
-  >
-    <a (click)="sidebarVisible.set(false)" class="sidebar-close float-end">
-      <app-icons icon="x"></app-icons>
-    </a>
+    <p-sidebar
+      [visible]="sidebarVisible()"
+      (onHide)="sidebarVisible.set(false)"
+      [style]="{ 'z-index': 10000 }"
+      appendTo="body"
+      [baseZIndex]="10000"
+      [dismissible]="true"
+      [showCloseIcon]="false"
+    >
+      <a (click)="sidebarVisible.set(false)" class="sidebar-close float-end">
+        <app-icons icon="x"></app-icons>
+      </a>
 
-    @for (nav of navMenu; track nav) {
-    <a class="nav-menu-link main-menu d-block" [routerLink]="[nav.routerLink]">
-      @if (!!nav.icon) {
-      <app-icons [icon]="nav?.icon || 'question'" class="me-2"></app-icons>
-      } <span [innerHtml]="nav.label"></span>
-    </a>
-    }
-    <hr />
-    @for (nav of utilityMenu; track nav) {
-    <a class="nav-menu-link main-menu d-block" [routerLink]="[nav.routerLink]">
-      @if (!!nav.icon) {
-      <app-icons [icon]="nav?.icon || 'question'" class="me-2"></app-icons>
+      @for (nav of navMenu; track nav) {
+      <a class="nav-menu-link main-menu d-block" [routerLink]="[nav.routerLink]">
+        @if (!!nav.icon) {
+        <app-icons [icon]="nav?.icon || 'question'" class="me-2"></app-icons>
+        } <span [innerHtml]="nav.label"></span>
+      </a>
       }
-      <span [innerHtml]="nav.label"></span>
-    </a>
-    }
-  </p-sidebar>
+      <hr />
+      @for (nav of utilityMenu; track nav) {
+      <a class="nav-menu-link main-menu d-block" [routerLink]="[nav.routerLink]">
+        @if (!!nav.icon) {
+        <app-icons [icon]="nav?.icon || 'question'" class="me-2"></app-icons>
+        }
+        <span [innerHtml]="nav.label"></span>
+      </a>
+      }
+    </p-sidebar>
+  </div>
 </div>

@@ -6,6 +6,15 @@
 }
 
 #nav {
+  .contact-info {
+    font-size: 14px;
+    .job-title {
+      font-size: 12px;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
   .menu-container {
     position: relative;
   }

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-starter": {
+    "financial-status-check": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -121,14 +121,14 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "port": 4200,
-            "buildTarget": "angular-starter:build"
+            "buildTarget": "financial-status-check:build"
           },
           "configurations": {
             "development": {
-              "buildTarget": "angular-starter:build:development"
+              "buildTarget": "financial-status-check:build:development"
             },
             "production": {
-              "buildTarget": "angular-starter:build:production"
+              "buildTarget": "financial-status-check:build:production"
             }
           },
           "defaultConfiguration": "development"
@@ -136,7 +136,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "angular-starter:build"
+            "buildTarget": "financial-status-check:build"
           }
         },
         "lint": {
@@ -178,12 +178,12 @@
           "builder": "@angular-devkit/build-angular:ssr-dev-server",
           "configurations": {
             "development": {
-              "browserTarget": "angular-starter:build:development",
-              "serverTarget": "angular-starter:server:development"
+              "browserTarget": "financial-status-check:build:development",
+              "serverTarget": "financial-status-check:server:development"
             },
             "production": {
-              "browserTarget": "angular-starter:build:production",
-              "serverTarget": "angular-starter:server:production"
+              "browserTarget": "financial-status-check:build:production",
+              "serverTarget": "financial-status-check:server:production"
             }
           },
           "defaultConfiguration": "development"
@@ -195,12 +195,12 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-starter:build:production",
-              "serverTarget": "angular-starter:server:production"
+              "browserTarget": "financial-status-check:build:production",
+              "serverTarget": "financial-status-check:server:production"
             },
             "development": {
-              "browserTarget": "angular-starter:build:development",
-              "serverTarget": "angular-starter:server:development"
+              "browserTarget": "financial-status-check:build:development",
+              "serverTarget": "financial-status-check:server:development"
             }
           },
           "defaultConfiguration": "production"
@@ -210,19 +210,19 @@
           "options": {},
           "configurations": {
             "production": {
-              "browserTarget": "angular-starter:build:production",
-              "serverTarget": "angular-starter:server:production"
+              "browserTarget": "financial-status-check:build:production",
+              "serverTarget": "financial-status-check:server:production"
             },
             "development": {
-              "browserTarget": "angular-starter:build:development",
-              "serverTarget": "angular-starter:server:development"
+              "browserTarget": "financial-status-check:build:development",
+              "serverTarget": "financial-status-check:server:development"
             }
           },
           "defaultConfiguration": "production"
         }
       }
     },
-    "angular-starter-e2e": {
+    "financial-status-check-e2e": {
       "root": "e2e",
       "sourceRoot": "e2e",
       "projectType": "application",
@@ -239,7 +239,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "./protractor.conf.js",
-            "devServerTarget": "angular-starter:serve"
+            "devServerTarget": "financial-status-check:serve"
           }
         },
         "lint": {
