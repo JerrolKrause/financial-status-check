@@ -53,3 +53,4 @@ yarn-error.log
 
 # angular
 /.angular
+_resources/
