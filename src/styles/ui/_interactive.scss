@@ -2,7 +2,9 @@
 a {
   cursor: pointer;
   color: $interact-primary-dk;
+  text-decoration: none;
   &:hover {
+    text-decoration: underline;
   }
   &:active {
   }
