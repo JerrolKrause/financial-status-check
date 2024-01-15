@@ -20,6 +20,10 @@
 .bg {
   padding-top: 4rem;
   padding-bottom: 2rem;
+  &.bg-lg {
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+  }
   &.bg-blue-wave {
     background: url('/assets/images/blue-wave-background.svg') no-repeat center center;
     background-size: cover;
