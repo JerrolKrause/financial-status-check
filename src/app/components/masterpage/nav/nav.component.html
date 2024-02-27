@@ -1,5 +1,5 @@
 <div id="nav">
-  <div class="d-none d-lg-flex">
+  <div class="d-flex" style="align-items: center">
     @for (nav of navMenu; track nav) {
     <a class="nav-menu-link main-menu" [routerLink]="nav.routerLink ? [nav.routerLink] : null" (click)="nav.command ? nav.command() : null">
       @if (!!nav.icon) {
@@ -11,13 +11,14 @@
       <div class="d-flex contact-info">
         <div class="me-3">
           Dylan R Jones<br />
-          <!--
-          <span class="job-title"><em>Financial Coach & Life Insurance Agent</em><br /></span>
-          -->
           <app-icons icon="phone"></app-icons> <a class="ms-2" href="tel:8652141371">(865) 214-1371</a><br />
-          <app-icons icon="envelope"></app-icons> <a class="ms-2" href="mailto:drjones&#64;capitalchoiceinvest.com">drjones&#64;capitalchoiceinvest.com</a
+
+          <app-icons icon="envelope"></app-icons>
+          <a class="ms-2" href="mailto:drjones&#64;capitalchoiceinvest.com">
+            <span class="d-inline d-md-none">Email</span>
+            <span class="d-none d-md-inline">drjones&#64;capitalchoiceinvest.com</span> </a
           ><br />
-          <a>Protect your family today!</a>
+          <a class="d-none d-md-inline">Protect your family today!</a>
         </div>
         <div>
           <img src="assets/images/dylan-jones-portrait-100.jpg" class="portrait" style="max-width: 65px" />
@@ -54,7 +55,7 @@
     </div>
 
     <!-- Toggle sidebar -->
-    <div class="pt-2 float-end d-block d-lg-none">
+    <div class="pt-2 float-end d-none d-lg-none">
       <a (click)="sidebarVisible.set(true)" class="p-2">
         <app-icons icon="bars" class="me-2 fa-lg"></app-icons>
       </a>
